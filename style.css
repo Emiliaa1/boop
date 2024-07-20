@@ -34,7 +34,7 @@ html{
 }
 
 .logo{
-   max-height:70px;
+   max-height:50px;
    width: 100%;
    align-self: center;
 }
@@ -78,6 +78,7 @@ html{
     top: 50%;
     left:50%;
     transform: translate(-50%, -50%);
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 }
 
 .text-box h1{
