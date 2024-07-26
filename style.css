@@ -15,6 +15,10 @@
     border:none;
 }
 
+body{
+    /*min-height: 100vh;*/
+}
+
 html{
     scroll-behavior: smooth;
     font-family: mainFont;
@@ -216,4 +220,57 @@ html{
 .text4 p{
     font-size:20px;
     text-align: justify;
+}
+
+.footer{
+    display:flex;
+    align-items: center;
+    gap:100px;
+}
+
+.footer-logo{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height:200px;
+    align-items: flex-start;
+    margin-left:40px;
+}
+
+#logoF{
+    height:70px;
+    width: 100%;
+}
+
+#verticalLine{
+    width:3px;
+    height:150px;
+    background-color:#3E4853;
+}
+
+#line2{
+    display:flex;
+    align-self: center;
+}
+
+.footer p{
+    flex-wrap:wrap;
+    width:320px;
+    font-size:15px;
+    text-align: justify;
+}
+
+footer{
+    display:flex;
+    padding:20px;
+    background-color:#CDD7E1;
+    min-height:200px;
+    background: linear-gradient(#A0ACB9,#CDD7E1,#f2f2f2);
+    justify-content: space-evenly;
+}
+
+.social-media{
+    display:flex;
+    align-self:center;
+    gap:15px;
 }
