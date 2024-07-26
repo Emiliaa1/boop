@@ -8,15 +8,16 @@
     src: url(Fonts/Poppins-Regular.ttf);
 }
 
+@font-face {
+    font-family: loopsyFont;
+    src: url(Fonts/Salmon.ttf);
+}
+
 *{
     margin:0;
     box-sizing: border-box;
     outline:none;
     border:none;
-}
-
-body{
-    /*min-height: 100vh;*/
 }
 
 html{
@@ -273,4 +274,11 @@ footer{
     display:flex;
     align-self:center;
     gap:15px;
+}
+
+@media  (max-width:1331){
+    .text-box h1{
+        font-size:10px;
+        color:red;
+    }
 }
