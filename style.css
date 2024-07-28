@@ -24,6 +24,52 @@ html{
     background-color: #f2f2f2;
 }
 
+.off-screen-menu{
+    background-color:#f2f2f2;
+    height:100vh;
+    width: 100%;
+    max-width:450px;
+    position:fixed;
+    top:0px;
+    z-index: 10;
+    margin:0;
+    left:-450px;
+    display: flex;
+    flex-direction: column;
+    font-size:2.5rem;
+    transition: .3s ease;
+    padding-top:7px;
+    gap:30px;
+}
+
+.off-screen-menu ul{
+    list-style-type: none;
+}
+
+.off-screen-menu.active{
+    left:0;
+}
+
+.close-menu{
+    justify-content: right;
+    align-self: flex-end;
+}
+
+#cross{
+    height:25px;
+    margin-right:50px;
+    margin-top:40px;
+}
+
+.pages a{
+    text-decoration: none;
+    color: #0D1113;
+}
+
+.pages a:hover{
+    font-size:larger;
+}
+
 .navigation{
     padding:7px;
     display: flex;
@@ -274,6 +320,16 @@ footer{
 }
 
 @media (max-width: 1320px) and (min-width:990px){
+
+    .off-screen-menu{
+        width:300px;
+        font-size:2rem;
+    }
+
+    #cross{
+        height:20px;
+    }
+
     .text-box h1{
         font-size:40px;
     }
@@ -345,8 +401,17 @@ footer{
 
 @media (max-width: 989px) and (min-width:600px){
 
+    .off-screen-menu{
+        width:200px;
+        font-size:1rem;
+    }
+
     .text-box p{
         font-size:10px;
+    }
+    
+    #cross{
+        height:15px;
     }
 
     .text-box h1{
@@ -436,7 +501,11 @@ footer{
 }
 
 @media (max-width:599px){
-    /*menu*/
+    /*side-menu*/
+    .off-screen-menu{
+        width:100%;
+    }
+    /*ham-menu*/
     .logo{
         width:60%;
     }

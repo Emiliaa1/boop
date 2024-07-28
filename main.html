@@ -7,17 +7,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Loopsy - Knitter's paradise</title>
         <link rel="stylesheet" href="style.css" >
+        <script type="module" src="script.js"></script>
     </head>
     <body>
         <!--Header section begins-->
         <header>
             <div class="box">
-                <div class="navigation">
+                <div class="off-screen-menu">
+                    <div class="close-menu"><img src="Images/cross.svg" alt="Close-menu" id="cross"></div>
+                    <div class="pages">
+                        <ul>
+                            <li><a href="main.html">Home</a></li>
+                            <li><a href="HTML/yarn.html">Yarns</a></li>
+                            <li><a href="HTML/accessories.html">Accessories</a></li>
+                            <li><a href="HTML/patterns.html">Patterns</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navigation"> 
                     <div class="menu">
-                        <a href="/"><img src="Images/menu-burger.svg" alt="Menu" id="menu"></a>
+                        <img src="Images/menu-burger.svg" alt="Menu" id="menu">
                     </div>
                     <div class="nav-logo">
-                        <div><a href="/"><img src="Images/Loopsy.svg" alt="Loopsy logo" class="logo"></a></div>
+                        <div><a href="main.html"><img src="Images/Loopsy.svg" alt="Loopsy logo" class="logo"></a></div>
                     </div>
                     <div class="nav-items">
                         <div><a href="/"><img src="Images/search.svg" alt="Search" class="item item-1"></a></div>
