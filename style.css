@@ -32,7 +32,7 @@ html{
     position:fixed;
     top:0px;
     z-index: 10;
-    margin:0;
+    margin:0px;
     left:-450px;
     display: flex;
     flex-direction: column;
@@ -68,6 +68,60 @@ html{
 
 .pages a:hover{
     font-size:larger;
+}
+
+.search-bar{
+    position:absolute;
+    display:flex;
+    background-color: #E8E6E6;
+    width:100%;
+    height:10vh;
+    top:-100px;
+    z-index:5;
+    align-items: center;
+    padding-left:10px;
+    padding-right:10px;
+    margin:0px;
+    transition: .3s ease;
+}
+
+.search-bar.active{
+    top:65px;
+}
+
+#cross-search{
+    height:20px;
+}
+
+.search-bar input{
+    height:70%;
+    width:100%;
+    background-color: #E8E6E6;
+    border:none;
+    border-bottom: 2px solid #3E4853;
+    font-size:2rem;
+}
+
+.search-bar input::placeholder{
+    font-size:2rem;
+    font-family: mainFont;
+    color:#3E4853;
+}
+
+.dark-filter{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index:9;
+    pointer-events:auto;
+    visibility: hidden;
+}
+
+.dark-filter.active{
+    visibility: visible;
 }
 
 .navigation{
@@ -311,6 +365,7 @@ footer{
     min-height:200px;
     background: linear-gradient(#A0ACB9,#CDD7E1,#f2f2f2);
     justify-content: space-evenly;
+    position:static;
 }
 
 .social-media{
@@ -319,7 +374,7 @@ footer{
     gap:15px;
 }
 
-@media (max-width: 1320px) and (min-width:990px){
+@media screen and (max-width: 1320px) and (min-width:990px){
 
     .off-screen-menu{
         width:300px;
@@ -399,7 +454,7 @@ footer{
 
 }
 
-@media (max-width: 989px) and (min-width:600px){
+@media screen and (max-width: 989px) and (min-width:600px){
 
     .off-screen-menu{
         width:200px;
@@ -500,7 +555,7 @@ footer{
 
 }
 
-@media (max-width:599px){
+@media screen and (max-width:599px){
     /*side-menu*/
     .off-screen-menu{
         width:100%;
