@@ -24,5 +24,3 @@ search.addEventListener('click',()=>{
 crossSearch.addEventListener('click',()=>{
     searchBar.classList.remove('active');
 })
-
-
