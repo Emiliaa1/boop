@@ -20,6 +20,7 @@ html{
     font-family: mainFont;
 }
 
+/*Navigation + menu section starts*/
 .box{
     background-color: #f2f2f2;
 }
@@ -165,3 +166,97 @@ html{
     height: 25px;
     width:100%;
 }
+
+/*Navigation + menu section ends*/
+
+/*Hero section starts*/
+
+.hero{
+   width:100%;
+   position:relative;
+}
+
+.hero img{
+    width:100%;
+    display:block;
+}
+
+#hero-title{
+    position:absolute;
+    color:#f2f2f2;
+    text-align: center;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+    font-family: cuteFont;
+}
+
+.hero h1{
+    font-size:10rem;
+}
+/*Hero section ends*/
+
+/*page description starts*/
+
+.description{
+    background-color:#f2f2f2;
+    display:flex;
+    justify-content: center;
+}
+
+.description p{
+    width:75%;
+    text-align:center;
+    margin:10%;
+    font-size:1.2em;
+    font-style: italic;
+}
+
+/*page description ends*/
+
+/*Products section starts*/
+#title{
+    display:flex;
+    justify-content: center;
+    padding:5%;
+}
+
+#title h2{
+    font-size:2em;
+}
+
+.products{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2em;
+    row-gap: 2em;
+    padding:0 5% 5% 5%;
+}
+
+.product{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items:center;
+    border-style: solid;
+    border-color: #636970;
+    padding:0.5em;
+}
+
+.product img{
+    width:100%;
+}
+
+.name{
+    font-size:1em;
+    text-align: center;
+}
+
+.button{
+    border-style: double;
+    padding:0.2em 0.5em 0.2em 0.5em;
+}
+
+/*Products section ends*/
+

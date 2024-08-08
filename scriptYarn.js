@@ -47,6 +47,7 @@ http.onload = function(){
                         <span>${item.price}</span>
                         <span>&euro;</span>
                     </p>
+                    <p class="button">Add to cart</p>
                 </div>
             `;
         }
