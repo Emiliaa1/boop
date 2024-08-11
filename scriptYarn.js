@@ -25,6 +25,18 @@ crossSearch.addEventListener('click',()=>{
     searchBar.classList.remove('active');
 })
 
+const cart = document.querySelector('#cart');
+const cartPage = document.querySelector('.pop-up');
+const crossCart = document.querySelector('#cross-cart');
+
+cart.addEventListener('click',()=>{
+    cartPage.classList.add('active');
+})
+
+crossCart.addEventListener('click',()=>{
+    cartPage.classList.remove('active');
+})
+
 
 //Create an  xmlhttp-request object
 
@@ -32,27 +44,76 @@ let http = new XMLHttpRequest();
 http.open('get','yarns.json',true);
 http.send();
 
-http.onload = function(){
-    if(this.readyState == 4 && this.status == 200){
+let i = 0;
+let v = [];
+let cartItems = JSON.parse(localStorage.getItem('cartItems')) || []; // Retrieve or initialize cartItems
+var n = cartItems.length; // Initialize n based on the saved cart items
+let cartOutput = ""; // To hold the cart HTML
+
+http.onload = function() {
+    if (this.readyState == 4 && this.status == 200) {
 
         let products = JSON.parse(this.responseText);
         let output = "";
 
-        for(let item of products){
-            output+=`
-                <div class = "product">
+        for (let item of products) {
+            output += `
+                <div class="product">
                     <img src="${item.image}" alt="${item.image}">
                     <p class="name">${item.name}</p>
                     <p class="price">
                         <span>${item.price}</span>
                         <span>&euro;</span>
                     </p>
-                    <p class="button">Add to cart</p>
+                    <button class="buttonItem" id="${i}">Add to cart</button>
                 </div>
             `;
+            v[i] = item;
+            i++;
         }
 
         document.querySelector(".products").innerHTML = output;
+        const addToCartButtons = document.querySelectorAll('.buttonItem');
 
+        // Restore the cart items on page load
+        cartItems.forEach(item => {
+            cartOutput += `
+                <div class="cart-product">
+                    <img src="${item.image}" alt="${item.image}">
+                    <p class="nameC">${item.name}</p>
+                    <p class="priceC">
+                        <span>${item.price}</span>
+                        <span>&euro;</span> 
+                    </p>
+                </div>
+            `;
+        });
+        document.querySelector(".loadItems").innerHTML = cartOutput;
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                let newItem = v[button.id];
+                cartItems.push(newItem); // Add new item to the cartItems array
+                n++; // Increment n after adding an item to cartItems
+
+                cartOutput += `
+                    <div class="cart-product">
+                        <img src="${newItem.image}" alt="${newItem.image}">
+                        <p class="nameC">${newItem.name}</p>
+                        <p class="priceC">
+                            <span>${newItem.price}</span>
+                            <span>&euro;</span> 
+                        </p>
+                    </div>
+                `;
+                document.querySelector(".loadItems").innerHTML = cartOutput;
+
+                // Save the updated cartItems array to localStorage
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+                console.log('Number of items in cart:', n);
+                console.log('Current cart items:', cartItems);
+            });
+        });
     }
 }

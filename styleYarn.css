@@ -169,6 +169,44 @@ html{
 
 /*Navigation + menu section ends*/
 
+/*Pop-up window*/
+.pop-up{
+    background-color: #f2f2f2;
+    position:absolute;
+    z-index:4;
+    width:25%;
+    height:50%;
+    right:2%;
+    margin-top:1%;
+    transform: scale(0);
+    border-radius: 2%;
+    padding:1%;
+}
+
+.pop-up.active{
+    transform: scale(1);
+}
+
+.popupHeader{
+    display:flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.pop-up h3{
+    font-size:1.5em;
+    font-weight: lighter;
+}
+
+.pop-up hr{
+    border-top: 3px solid #A0ACB9;
+}
+
+#cross-cart{
+    height:20px;
+}
+
+
 /*Hero section starts*/
 
 .hero{
@@ -260,3 +298,88 @@ html{
 
 /*Products section ends*/
 
+/*Footer section starts*/
+.footer{
+    display:flex;
+    align-items: center;
+    gap:100px;
+}
+
+.footer-logo{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height:200px;
+    align-items: flex-start;
+    margin-left:40px;
+}
+
+#logoF{
+    height:70px;
+    width: 100%;
+}
+
+#verticalLine{
+    width:3px;
+    height:150px;
+    background-color:#3E4853;
+}
+
+#line2{
+    display:flex;
+    align-self: center;
+}
+
+.footer p{
+    flex-wrap:wrap;
+    width:320px;
+    font-size:15px;
+    text-align: justify;
+}
+
+footer{
+    display:flex;
+    padding:20px;
+    background-color:#CDD7E1;
+    min-height:200px;
+    background: linear-gradient(#A0ACB9,#CDD7E1,#f2f2f2);
+    justify-content: space-evenly;
+    position:static;
+}
+
+.social-media{
+    display:flex;
+    align-self:center;
+    gap:15px;
+}
+
+/*Footer section ends*/
+
+/*Cart items*/
+
+.loadItems{
+    display:flex;
+    flex-direction: column;
+    overflow-y:scroll;
+    height:90%;
+}
+
+.cart-product{
+    display:flex;
+    align-items: center;
+    gap:5px;
+}
+
+.cart-product img{
+    width:20%;
+}
+
+.nameC{
+    font-size:0.7em;
+    text-wrap:wrap;
+    width:47%;
+}
+
+.priceC{
+    font-size:0.7em;
+}
