@@ -775,12 +775,14 @@ footer{
 	{
                 
         .navigation{
+            position:relative;
             padding:5px;
             display: flex;
             align-items:center;
             justify-content: space-between;
         }
         .nav-logo{
+            position:absolute;
             margin:0 auto;
             left:50%;
             transform: translateX(-50%);
