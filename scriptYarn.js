@@ -117,3 +117,6 @@ http.onload = function() {
         });
     }
 }
+
+//Clears cart
+localStorage.removeItem('cartItems');
