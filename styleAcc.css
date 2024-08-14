@@ -71,3 +71,7 @@ html{
 #menu{
     height: 25px;
 }
+#menu{
+    height: 25px;
+    width:100%;
+}
