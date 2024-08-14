@@ -1,0 +1,69 @@
+@font-face {
+    font-family: cuteFont;
+    src: url(Fonts/Cottontail\ Free.ttf);
+}
+
+@font-face {
+    font-family: mainFont;
+    src: url(Fonts/Poppins-Regular.ttf);
+}
+
+*{
+    margin:0;
+    box-sizing: border-box;
+    outline:none;
+    border:none;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: mainFont;
+}
+
+.box{
+    background-color: #f2f2f2;
+    height:60px;
+}
+
+.navigation{
+    padding:7px;
+    position:relative;
+}
+.nav-logo{
+    position:absolute;
+    margin:0 auto;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 7;
+}
+
+.logo{
+   max-height:50px;
+   width: 100%;
+   align-self: center;
+}
+
+.nav-items{
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    gap: 1em;
+    margin-left: auto; 
+    right:0;
+    z-index: 7;
+}
+.item{
+    height: 25px;
+    width:100%;
+}
+
+.menu{
+    position:absolute;
+    padding:10px;
+    margin-right:auto;
+    z-index: 7;
+}
+#menu{
+    height: 25px;
+    width:100%;
+}
