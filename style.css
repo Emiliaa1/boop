@@ -132,11 +132,11 @@ html{
     justify-content: space-between;
 }
 .nav-logo{
-    position:absolute;
     margin:0 auto;
-    left:50%;
-    transform: translateX(-50%);
-    z-index: 7;
+    z-index: 7; 
+    display:flex;
+    justify-content: center;
+    flex:2;
 }
 
 .logo{
@@ -151,6 +151,8 @@ html{
     gap: 1em;
     margin-left: auto; 
     z-index: 7;
+    flex:1;
+    justify-content: flex-end;
 }
 .item{
     height: 25px;
@@ -159,12 +161,13 @@ html{
 
 .menu{
     padding:10px;
-    margin-right:auto;
     z-index: 7;
+    flex:1;
+    display:flex;
+    justify-content: flex-start;
 }
 #menu{
     height: 25px;
-    width:100%;
 }
 
 .container img{

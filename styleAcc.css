@@ -22,35 +22,39 @@ html{
 
 .box{
     background-color: #f2f2f2;
-    height:60px;
 }
 
 .navigation{
     padding:7px;
-    position:relative;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    position: relative; /* Added for the logo centering */
 }
+
 .nav-logo{
-    position:absolute;
-    margin:0 auto;
-    left:50%;
-    transform: translateX(-50%);
+    margin: 0 auto;
     z-index: 7;
+    display: flex;
+    justify-content: center;
+    flex: 2; /* Added to take up remaining space */
 }
 
 .logo{
    max-height:50px;
    width: 100%;
    align-self: center;
+   
 }
 
 .nav-items{
-    position: absolute;
     padding: 10px;
     display: flex;
     gap: 1em;
-    margin-left: auto; 
-    right:0;
+    margin-left: auto;
     z-index: 7;
+    flex: 1; /* Added to take up remaining space */
+    justify-content: flex-end;
 }
 .item{
     height: 25px;
@@ -58,12 +62,12 @@ html{
 }
 
 .menu{
-    position:absolute;
     padding:10px;
-    margin-right:auto;
     z-index: 7;
+    flex: 1; /* Added to take up remaining space */
+    display: flex;
+    justify-content: flex-start;
 }
 #menu{
     height: 25px;
-    width:100%;
 }
