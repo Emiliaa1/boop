@@ -24,6 +24,108 @@ html{
     background-color: #f2f2f2;
 }
 
+
+.off-screen-menu{
+    background-color:#f2f2f2;
+    height:100vh;
+    width: 100%;
+    max-width:450px;
+    position:fixed;
+    top:0px;
+    z-index: 1000;
+    margin:0px;
+    left:-450px;
+    display: flex;
+    flex-direction: column;
+    font-size:2.5rem;
+    transition: .3s ease;
+    padding-top:7px;
+    gap:30px;
+}
+
+.off-screen-menu ul{
+    list-style-type: none;
+}
+
+.off-screen-menu.active{
+    left:0;
+}
+
+.close-menu{
+    justify-content: right;
+    align-self: flex-end;
+}
+
+#cross{
+    height:25px;
+    margin-right:50px;
+    margin-top:40px;
+}
+
+.pages a{
+    text-decoration: none;
+    color: #0D1113;
+}
+
+.pages a:hover{
+    font-size:larger;
+}
+
+.search-bar{
+    position:absolute;
+    display:flex;
+    background-color: #E8E6E6;
+    width:100%;
+    height:10vh;
+    top:-100px;
+    z-index:3;
+    align-items: center;
+    padding-left:10px;
+    padding-right:10px;
+    margin:0px;
+    transition: .3s ease;
+}
+
+.search-bar.active{
+    top:65px;
+}
+
+#cross-search{
+    height:20px;
+}
+
+.search-bar input{
+    height:70%;
+    width:100%;
+    background-color: #E8E6E6;
+    border:none;
+    border-bottom: 2px solid #3E4853;
+    font-size:2rem;
+}
+
+.search-bar input::placeholder{
+    font-size:2rem;
+    font-family: mainFont;
+    color:#3E4853;
+}
+
+.dark-filter{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index:999;
+    pointer-events:auto;
+    visibility: hidden;
+}
+
+.dark-filter.active{
+    visibility: visible;
+}
+
+
 .navigation{
     padding:7px;
     display: flex;
@@ -73,5 +175,40 @@ html{
 }
 #menu{
     height: 25px;
-    width:100%;
+}
+
+.pop-up{
+    background-color: #f2f2f2;
+    position:absolute;
+    z-index:4;
+    width:25%;
+    height:50%;
+    right:2%;
+    margin-top:1%;
+    transform: scale(0);
+    border-radius: 2%;
+    padding:1%;
+}
+
+.pop-up.active{
+    transform: scale(1);
+}
+
+.popupHeader{
+    display:flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.pop-up h3{
+    font-size:1.5em;
+    font-weight: lighter;
+}
+
+.pop-up hr{
+    border-top: 3px solid #A0ACB9;
+}
+
+#cross-cart{
+    height:20px;
 }
