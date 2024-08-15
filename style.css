@@ -330,7 +330,7 @@ html{
 .footer{
     display:flex;
     align-items: center;
-    gap:100px;
+    gap:50px;
     justify-content: center;
     flex:2;
 }
@@ -346,6 +346,8 @@ html{
 
 #logoF{
     height:70px;
+    display: block;
+    max-width:100%;
 }
 
 #verticalLine{
