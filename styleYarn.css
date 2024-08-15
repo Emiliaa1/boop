@@ -305,7 +305,9 @@ html{
 .footer{
     display:flex;
     align-items: center;
-    gap:100px;
+    gap:60px;
+    justify-content: flex-end;
+    flex:1;
 }
 
 .footer-logo{
@@ -317,9 +319,18 @@ html{
     margin-left:40px;
 }
 
-#logoF{
-    height:70px;
-    width: 100%;
+#logobox {
+    margin: 0;
+    padding: 0;
+    display: block; /* Change to block to remove flex centering */
+    text-align: left; /* Align content to the left */
+}
+
+#logoF {
+    display: inline-block; /* Inline-block allows it to align with text */
+    max-width: 150px; /* Set a reasonable width for the logo */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 0; /* Remove any auto-centering */
 }
 
 #verticalLine{
@@ -351,8 +362,10 @@ footer{
 }
 
 .social-media{
+    flex:1;
     display:flex;
     align-self:center;
+    justify-content: center;
     gap:15px;
 }
 
