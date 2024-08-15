@@ -331,6 +331,7 @@ html{
     display:flex;
     align-items: center;
     gap:100px;
+    background-color: brown;
 }
 
 .footer-logo{
@@ -340,10 +341,12 @@ html{
     min-height:200px;
     align-items: flex-start;
     margin-left:40px;
+    background-color: purple;
 }
 
 #logoF{
     height:70px;
+    background-color: red;
 }
 
 #verticalLine{
@@ -358,6 +361,7 @@ html{
 }
 
 .footer p{
+    background-color: aqua;
     flex-wrap:wrap;
     width:320px;
     font-size:15px;
@@ -375,6 +379,7 @@ footer{
 }
 
 .social-media{
+    background-color: green;
     display:flex;
     align-self:center;
     gap:15px;
