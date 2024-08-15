@@ -753,8 +753,38 @@ footer{
         margin:0px;
     }
     /*footer*/
-     /* Adjust footer alignment */
-     .footer-logo, .footer-logo p {
+    #logoF{
+        width: 40%;
+    }
+
+    .footer-logo{
+        min-height:none;
+        margin-left:0px;
+    }
+
+    .footer-logo p{
+        font-size:7px;
+        width:120px;
+    }
+
+    .footer{
+        gap: 0px;
+    }
+
+    .social-media img{
+        width:25px;
+    }
+
+    #verticalLine{
+        height:70px;
+        width:1px;
+    }
+}
+
+@media screen and (min-resolution: 200dpi) {
+
+    /* Adjust footer alignment */
+    .footer-logo, .footer-logo p {
         text-align: center; /* Center align footer content */
         margin: 0 auto;
     }
