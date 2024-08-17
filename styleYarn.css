@@ -302,6 +302,7 @@ html{
 /*Products section ends*/
 
 /*Footer section starts*/
+
 .footer{
     display:flex;
     align-items: center;
@@ -398,4 +399,314 @@ footer{
 
 .priceC{
     font-size:0.7em;
+}
+
+/*media queries*/
+
+@media screen and (max-width:1320px) and (min-width:990px){
+    .search-bar.active{
+        top:69px;
+    }
+
+    .off-screen-menu{
+        width:300px;
+        font-size:2rem;
+    }
+
+    #cross{
+        height:20px;
+    }
+
+    /*Hero section starts*/
+    
+    .hero h1{
+        font-size:9rem;
+    }
+    /*Hero section ends*/
+    
+    /*page description starts*/
+    
+    .description p{
+        width:80%;
+        font-size:1.1em;
+    }
+    
+    /*page description ends*/
+
+     /*Pop-up window*/
+     .pop-up{
+        width:40%;
+        height:50%;
+    }
+    
+    .pop-up h3{
+        font-size:1.5em;
+    }
+
+    #cross-cart{
+        height:20px;
+    }
+}
+
+
+@media screen and (max-width:989px) and (min-width:600px){
+
+    .search-bar{
+        height:9vh;
+    }
+
+    #cross-search{
+        height:15px;
+    }
+
+    .search-bar input{
+        font-size:1.5rem;
+    }
+
+    .search-bar input::placeholder{
+        font-size:1.5rem;
+    }
+
+    .off-screen-menu{
+        width:250px;
+        font-size:1.3rem;
+    }
+
+    #cross{
+        height:15px;
+    }
+
+     /*Hero section starts*/
+     .hero h1{
+        font-size:7rem;
+    }
+    /*Hero section ends*/
+
+    /*page description starts*/
+    
+    .description p{
+        width:80%;
+        font-size:0.9em;
+    }
+    
+    /*page description ends*/
+
+    #logoF{
+        width: 60%;
+    }
+    .footer-logo p{
+        font-size:10px;
+        width:200px;
+    }
+
+    .footer{
+        gap:50px;
+    }
+
+    .social-media img{
+        width:30px;
+    }
+
+    #verticalLine{
+        height:100px;
+        width:2px;
+    }
+
+     /*Pop-up window*/
+     .pop-up{
+        width:50%;
+        height:55%;
+    }
+    
+    .pop-up h3{
+        font-size:1.3em;
+    }
+
+    #cross-cart{
+        height:15px;
+    }
+}
+
+@media screen and (max-width:599px){
+     /*search bar*/
+    
+     .search-bar{
+        height:7vh;
+    }
+
+    .search-bar.active{
+        top:58px;
+    }
+
+    #cross-search{
+        height:13px;
+    }
+
+    .search-bar input{
+        font-size:1rem;
+    }
+
+    .search-bar input::placeholder{
+        font-size:1rem;
+    }
+
+
+    /*side-menu*/
+    .off-screen-menu{
+        width:100%;
+    }
+    /*ham-menu*/
+    .logo{
+        max-height:30px;
+    }
+
+    .item{
+        height:15px;
+    }
+
+    .nav-items{
+        gap:0.3em;
+    }
+
+    #menu{
+        height:15px;
+    }
+
+    
+     /*Hero section starts*/
+     .hero h1{
+        font-size:5rem;
+    }
+    /*Hero section ends*/
+
+    /*page description starts*/
+    
+    .description p{
+        width:80%;
+        font-size:0.8em;
+    }
+    
+    /*page description ends*/
+
+    
+    .products{
+        display:grid;
+        grid-template-columns: 1fr;
+        row-gap: 2em;
+        padding:0 5% 5% 5%;
+    }
+
+
+     /*footer*/
+     #logoF{
+        width: 40%;
+    }
+
+    .footer-logo{
+        min-height:none;
+        margin-left:0px;
+    }
+
+    .footer-logo p{
+        font-size:7px;
+        width:120px;
+    }
+
+    .footer{
+        gap: 0px;
+    }
+
+    .social-media img{
+        width:25px;
+    }
+
+    #verticalLine{
+        height:70px;
+        width:1px;
+    }
+
+    
+    /*Pop-up window*/
+    .pop-up{
+        width:70%;
+        height:50%;
+    }
+    
+    .pop-up h3{
+        font-size:1.3em;
+    }
+
+    #cross-cart{
+        height:15px;
+    }
+
+}
+
+@media screen and (min-width:1600px){
+    
+     /*search bar*/
+    
+     .search-bar{
+        height: 10vh;
+        top:-300px;
+    }
+
+    .search-bar.active{
+        top:70px;
+    }
+
+    #cross-search{
+        height:30px;
+    }
+
+    .search-bar input{
+        font-size:2.8rem;
+    }
+
+    .search-bar input::placeholder{
+        font-size:2.8rem;
+    }
+
+    /*navigation*/
+
+    .logo{
+    max-height:70px;
+    }
+
+    .item{
+        height: 30px;
+    }
+    #menu{
+        height: 30px;
+    }
+
+
+    .cart-product img{
+        width:22%;
+    }
+
+    .nameC{
+        font-size:0.9em;
+        text-wrap:wrap;
+        width:47%;
+    }
+
+    .priceC{
+        font-size:0.9em;
+    }
+
+    
+    .hero h1{
+        font-size:13rem;
+    }
+
+    /*page description starts*/
+
+    .description p{
+        width:75%;
+        text-align:center;
+        margin:10%;
+        font-size:1.5em;
+        font-style: italic;
+    }
 }

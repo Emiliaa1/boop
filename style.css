@@ -459,6 +459,10 @@ footer{
 
 @media screen and (max-width: 1320px) and (min-width:990px){
 
+    .search-bar.active{
+        top:69px;
+    }
+
     .off-screen-menu{
         width:300px;
         font-size:2rem;
@@ -535,13 +539,44 @@ footer{
         width:400px;
     }
 
+    
+     /*Pop-up window*/
+     .pop-up{
+        width:40%;
+        height:50%;
+    }
+    
+    .pop-up h3{
+        font-size:1.5em;
+    }
+
+    #cross-cart{
+        height:20px;
+    }
+
 }
 
 @media screen and (max-width: 989px) and (min-width:600px){
+        
+    .search-bar{
+        height:9vh;
+    }
+
+    #cross-search{
+        height:15px;
+    }
+
+    .search-bar input{
+        font-size:1.5rem;
+    }
+
+    .search-bar input::placeholder{
+        font-size:1.5rem;
+    }
 
     .off-screen-menu{
-        width:200px;
-        font-size:1rem;
+        width:250px;
+        font-size:1.3rem;
     }
 
     .text-box p{
@@ -636,16 +671,54 @@ footer{
         width:2px;
     }
 
+     /*Pop-up window*/
+     .pop-up{
+        width:50%;
+        height:55%;
+    }
+    
+    .pop-up h3{
+        font-size:1.3em;
+    }
+
+    #cross-cart{
+        height:15px;
+    }
+
 }
 
 @media screen and (max-width:599px){
+
+    /*search bar*/
+    
+    .search-bar{
+        height:7vh;
+    }
+
+    .search-bar.active{
+        top:58px;
+    }
+
+    #cross-search{
+        height:13px;
+    }
+
+    .search-bar input{
+        font-size:1rem;
+    }
+
+    .search-bar input::placeholder{
+        font-size:1rem;
+    }
+
+
     /*side-menu*/
     .off-screen-menu{
         width:100%;
     }
     /*ham-menu*/
     .logo{
-        width:60%;
+        max-height:30px;
     }
 
     .item{
@@ -656,12 +729,8 @@ footer{
         gap:0.3em;
     }
 
-    .nav-logo{
-        left:55%;
-    }
-
     #menu{
-        width:60%;
+        height:15px;
     }
     /*main photo and text*/
     .text-box p{
@@ -783,4 +852,158 @@ footer{
         height:70px;
         width:1px;
     }
+
+     /*Pop-up window*/
+     .pop-up{
+        width:70%;
+        height:50%;
+    }
+    
+    .pop-up h3{
+        font-size:1.3em;
+    }
+
+    #cross-cart{
+        height:15px;
+    }
+}
+
+@media screen and (min-width:1600px){
+    /*search bar*/
+    
+    .search-bar{
+        height: 10vh;
+        top:-300px;
+    }
+
+    .search-bar.active{
+        top:70px;
+    }
+
+    #cross-search{
+        height:30px;
+    }
+
+    .search-bar input{
+        font-size:2.8rem;
+    }
+
+    .search-bar input::placeholder{
+        font-size:2.8rem;
+    }
+
+    /*navigation*/
+
+    .logo{
+    max-height:70px;
+    }
+
+    .item{
+        height: 30px;
+    }
+    #menu{
+        height: 30px;
+    }
+
+    .text-box p{
+        font-size: 30px;
+    }
+
+    .title1{
+        text-align: center;
+        font-size: 80px;
+        color: #0D1113;
+        margin-bottom: 20px;
+    }
+
+    .text1{
+        font-size: 25px;
+    }
+
+
+    .divider{
+        width:120px;
+    }
+
+
+    .text-container2{
+        padding-right:100px;
+    }
+
+    #photo{
+        display:block;
+        width:700px;
+        margin-right:10px;
+    }
+
+    .text2{
+        color:#f2f2f2;
+        width:800px;
+        margin: auto 80px auto auto;
+    }
+
+    .text2 h2{
+        font-size: 50px;
+    }
+
+    .text2 p{
+        font-size: 25px;
+        text-align: justify;
+    }
+
+    .text-container3{
+        background-color:#f2f2f2;
+        display:flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding-left: 100px;
+    }
+
+    .text-container3 img{
+        display:block;
+        width:700px;
+        margin-left:10px;
+    }
+    .text3{
+        width: 800px;
+        margin: auto auto auto 80px;
+    }
+
+    .text3 h2{
+        font-size: 50px;
+    }
+
+    .text3 p{
+        font-size: 25px;
+        text-align: justify;
+    }
+
+    .text-container4{
+        background-color:#3E4853;
+        display: flex;
+        align-items: center;
+        padding-right:100px;
+    }
+
+    .text-container4 img{
+        display:block;
+        width:700px;
+        margin-right:10px;
+    }
+
+    .text4{
+        color:#f2f2f2;
+        width:800px;
+        margin: auto 80px auto auto;
+    }
+
+    .text4 h2{
+        font-size: 50px;
+    }
+
+    .text4 p{
+        font-size:23px;
+        text-align: justify;
+    }
+
 }
