@@ -173,10 +173,27 @@ html{
 /*Navigation + menu section ends*/
 
 /*Pop-up window*/
+
+.dark-filterp{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index:99;
+    pointer-events:auto;
+    visibility: hidden;
+}
+
+.dark-filterp.active{
+    visibility: visible;
+}
+
 .pop-up{
     background-color: #f2f2f2;
     position:absolute;
-    z-index:4;
+    z-index:100;
     width:25%;
     height:50%;
     right:2%;

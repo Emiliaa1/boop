@@ -28,13 +28,16 @@ crossSearch.addEventListener('click',()=>{
 const cart = document.querySelector('#cart');
 const cartPage = document.querySelector('.pop-up');
 const crossCart = document.querySelector('#cross-cart');
+const overlayp = document.querySelector('.dark-filterp');
 
 cart.addEventListener('click',()=>{
     cartPage.classList.add('active');
+    overlayp.classList.add('active');
 })
 
 crossCart.addEventListener('click',()=>{
     cartPage.classList.remove('active');
+    overlayp.classList.remove('active');
 })
 
 
