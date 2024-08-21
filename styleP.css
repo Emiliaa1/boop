@@ -427,6 +427,30 @@ footer{
     font-size:0.7em;
 }
 
+.quantity-controls{
+    flex:2;
+    display:flex;
+    justify-content: center;
+}
+
+.plus-button{
+   width:100%;
+   flex:1;
+   text-align: center;
+}
+
+.minus-button{
+    width:100%;
+    flex:1;
+    text-align: center;
+}
+
+.quantity{
+    flex:1;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
 
 /*media queries*/
 

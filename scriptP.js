@@ -41,21 +41,18 @@ crossCart.addEventListener('click',()=>{
 })
 
 
-//Create an  xmlhttp-request object
-
+//Create an XMLHttpRequest object
 let http = new XMLHttpRequest();
-http.open('get','patterns.json',true);
+http.open('get', 'patterns.json', true);
 http.send();
 
 let i = 0;
 let v = [];
 let cartItems = JSON.parse(localStorage.getItem('cartItems')) || []; // Retrieve or initialize cartItems
-var n = cartItems.length; // Initialize n based on the saved cart items
 let cartOutput = ""; // To hold the cart HTML
 
-http.onload = function() {
+http.onload = function () {
     if (this.readyState == 4 && this.status == 200) {
-
         let products = JSON.parse(this.responseText);
         let output = "";
 
@@ -79,47 +76,74 @@ http.onload = function() {
         const addToCartButtons = document.querySelectorAll('.buttonItem');
 
         // Restore the cart items on page load
-        cartItems.forEach(item => {
-            cartOutput += `
-                <div class="cart-product">
-                    <img src="${item.image}" alt="${item.image}">
-                    <p class="nameC">${item.name}</p>
-                    <p class="priceC">
-                        <span>${item.price}</span>
-                        <span>&euro;</span> 
-                    </p>
-                </div>
-            `;
-        });
-        document.querySelector(".loadItems").innerHTML = cartOutput;
+        renderCart();
 
         addToCartButtons.forEach(button => {
             button.addEventListener('click', () => {
                 let newItem = v[button.id];
-                cartItems.push(newItem); // Add new item to the cartItems array
-                n++; // Increment n after adding an item to cartItems
+                let existingItem = cartItems.find(item => item.name === newItem.name);
 
-                cartOutput += `
-                    <div class="cart-product">
-                        <img src="${newItem.image}" alt="${newItem.image}">
-                        <p class="nameC">${newItem.name}</p>
-                        <p class="priceC">
-                            <span>${newItem.price}</span>
-                            <span>&euro;</span> 
-                        </p>
-                    </div>
-                `;
-                document.querySelector(".loadItems").innerHTML = cartOutput;
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    newItem.quantity = 1;
+                    cartItems.push(newItem);
+                }
 
-                // Save the updated cartItems array to localStorage
+                renderCart();
                 localStorage.setItem('cartItems', JSON.stringify(cartItems));
-
-                console.log('Number of items in cart:', n);
-                console.log('Current cart items:', cartItems);
             });
         });
     }
+};
+
+// Function to render the cart items with plus and minus buttons
+function renderCart() {
+    cartOutput = "";
+    cartItems.forEach((item, index) => {
+        cartOutput += `
+            <div class="cart-product" data-index="${index}">
+                <img src="${item.image}" alt="${item.image}">
+                <p class="nameC">${item.name}</p>
+                <p class="priceC">
+                    <span>${item.price}</span>
+                    <span>&euro;</span> 
+                </p>
+                <div class="quantity-controls">
+                    <button class="minus-button" data-index="${index}">-</button>
+                    <span class="quantity">${item.quantity}</span>
+                    <button class="plus-button" data-index="${index}">+</button>
+                </div>
+            </div>
+        `;
+    });
+    document.querySelector(".loadItems").innerHTML = cartOutput;
+
+    const plusButtons = document.querySelectorAll('.plus-button');
+    const minusButtons = document.querySelectorAll('.minus-button');
+
+    plusButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            let index = button.getAttribute('data-index');
+            cartItems[index].quantity += 1;
+            renderCart();
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        });
+    });
+
+    minusButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            let index = button.getAttribute('data-index');
+            if (cartItems[index].quantity > 1) {
+                cartItems[index].quantity -= 1;
+            } else {
+                cartItems.splice(index, 1);
+            }
+            renderCart();
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        });
+    });
 }
 
-//Clears cart
+//Clears cart (for debugging or reset purposes)
 localStorage.removeItem('cartItems');
