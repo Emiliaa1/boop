@@ -50,6 +50,7 @@ let i = 0;
 let v = [];
 let cartItems = JSON.parse(localStorage.getItem('cartItems')) || []; // Retrieve or initialize cartItems
 let cartOutput = ""; // To hold the cart HTML
+let total = JSON.parse(localStorage.getItem('total')) || 0;
 
 http.onload = function () {
     if (this.readyState == 4 && this.status == 200) {
@@ -89,9 +90,10 @@ http.onload = function () {
                     newItem.quantity = 1;
                     cartItems.push(newItem);
                 }
-
+                total+=newItem.price;
                 renderCart();
                 localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                localStorage.setItem('total',JSON.stringify(total));
             });
         });
     }
@@ -118,6 +120,7 @@ function renderCart() {
         `;
     });
     document.querySelector(".loadItems").innerHTML = cartOutput;
+    document.querySelector(".total-price").innerHTML = total;
 
     const plusButtons = document.querySelectorAll('.plus-button');
     const minusButtons = document.querySelectorAll('.minus-button');
@@ -126,8 +129,10 @@ function renderCart() {
         button.addEventListener('click', () => {
             let index = button.getAttribute('data-index');
             cartItems[index].quantity += 1;
+            total+=cartItems[index].price;
             renderCart();
             localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            localStorage.setItem('total', JSON.stringify(total));
         });
     });
 
@@ -136,14 +141,17 @@ function renderCart() {
             let index = button.getAttribute('data-index');
             if (cartItems[index].quantity > 1) {
                 cartItems[index].quantity -= 1;
+                total-=cartItems[index].price;
             } else {
+                total-=cartItems[index].price;
                 cartItems.splice(index, 1);
             }
             renderCart();
             localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            localStorage.setItem('total', JSON.stringify(total));
         });
     });
 }
 
 //Clears cart (for debugging or reset purposes)
-localStorage.removeItem('cartItems');
+//localStorage.removeItem('cartItems');

@@ -229,6 +229,16 @@ html{
 #cross-cart{
     height:20px;
 }
+
+.total{
+    display:flex;
+}
+
+.total h4{
+    font-size: 1em;
+    font-weight: lighter;
+    letter-spacing: 0.05em;
+}
 /*pop-up section ends*/
 
 /*hero section starts*/
@@ -404,7 +414,7 @@ footer{
     display:flex;
     flex-direction: column;
     overflow-y:scroll;
-    height:90%;
+    height:80%;
 }
 
 .cart-product{
