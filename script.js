@@ -114,6 +114,17 @@ function renderCart() {
             localStorage.setItem('total', JSON.stringify(total));
         });
     });
+
+    const emptyButton = document.querySelector('#empty-cart');
+
+     emptyButton.addEventListener('click', () => {
+        cartItems = [];
+        total = 0;
+        renderCart();
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        localStorage.setItem('total', JSON.stringify(total));
+    });
+        
 }
 
 //Clears cart (for debugging or reset purposes)

@@ -448,12 +448,32 @@ footer{
 
 .total{
     display:flex;
+    flex:1;
 }
 
 .total h4{
     font-size: 1em;
     font-weight: lighter;
     letter-spacing: 0.05em;
+}
+
+
+.cart-bottom{
+    display:flex;
+}
+
+#checkout{
+    background-color: #3E4853;
+    color:#f2f2f2;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    flex:1;
+}
+
+#empty-cart{
+    flex:1;
+    background-color: #f2f2f2;
+    text-decoration: underline;
 }
 
 .loadItems{
