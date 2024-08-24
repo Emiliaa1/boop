@@ -41,7 +41,16 @@ crossCart.addEventListener('click',()=>{
     overlayp.classList.remove('active');
 })
 
+const input = document.querySelector('#input');
 
+input.addEventListener('keydown', function(event){
+    if(event.key === 'Enter'){
+        const inputValue = event.target.value;
+        window.location.href = 'search.html';
+        localStorage.setItem('inputValue', JSON.stringify(inputValue));
+        console.log(inputValue);
+    }
+});
 
 //Create an XMLHttpRequest object
 let http = new XMLHttpRequest();
