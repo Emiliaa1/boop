@@ -34,7 +34,7 @@
                     </div>
                     <div class="nav-items">
                         <div><img src="Images/search.svg" alt="Search" class="item item-1" id="search"></div>
-                        <div><a href="/"><img src="Images/user.svg" alt="Account" class="item item-3"></a></div>
+                        <div><img src="Images/user.svg" alt="Account" class="item item-3" id="account"></div>
                         <div><img src="Images/basket-shopping-simple.svg" alt="Cart" class="item item-4" id="cart"></div>
                     </div>
                 </div> 
@@ -65,7 +65,25 @@
                         <button id="checkout">CHECK-OUT</button>
                         <button id="empty-cart">empty cart</button>
                     </div>
-                </div>    
+                </div> 
+                <div class="pop-upAcc">
+                    <div class="popupHeaderAcc">
+                        <h3>AUTHENTICATION</h3>
+                        <div class="close-acc"><img src="Images/cross.svg" alt="Close-authentification" id="cross-acc"></div>
+                    </div>
+                    <hr>
+                    <div class="login">
+                        <div class="inputItem">
+                            <label for="username"><b>Username</b></label>
+                            <input type="text" name="username" placeholder="Enter username" id="username"/>
+                        </div>
+                        <div class="inputItem">
+                            <label for="password"><b>Password</b></label>
+                            <input type="password" name="password" placeholder="Enter password" id="password"/>
+                        </div>
+                        <div id="buttonContainer"><button type="submit" id="loginBtn">Login</button></div>
+                    </div>
+                </div>   
             </div>
         </header>
         <!--Header section ends-->

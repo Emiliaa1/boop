@@ -225,6 +225,28 @@ function renderCart() {
         
 }
 
+const account = document.querySelector('#account');
+const accPage = document.querySelector('.pop-upAcc');
+const crossAcc = document.querySelector('#cross-acc');
+
+account.addEventListener('click', () => {
+    accPage.classList.add('active');
+    overlayp.classList.add('active');
+});
+
+crossAcc.addEventListener('click', () => {
+    accPage.classList.remove('active');
+    overlayp.classList.remove('active');
+});
+
+const login = document.querySelector('#loginBtn');
+const username = document.querySelector('#username');
+
+login.addEventListener('click',()=>{
+    window.location.href = 'sorry.html';
+    localStorage.setItem('userName', JSON.stringify(username.value));
+});
+
 // Search bar functionality
 
 const input = document.querySelector('#input'); // Get the input

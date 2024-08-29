@@ -1,0 +1,40 @@
+@font-face {
+    font-family: sorryFont;
+    src: url(Fonts/Salmon.ttf);
+}
+
+@font-face {
+    font-family: mainFont;
+    src: url(Fonts/Poppins-Regular.ttf);
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: mainFont;
+}
+
+body{
+    padding:0;
+    margin:0;
+}
+
+.box{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    height:100vh;
+}
+
+#p1{
+    font-family: sorryFont;
+    font-weight: bold;
+    font-size:5em;
+    text-align:center;
+}
+
+#p2{
+    font-size: 2em;
+    width:80%;
+    text-align:center;
+}
