@@ -44,6 +44,7 @@ crossCart.addEventListener('click',()=>{
 
 let inputValue = JSON.parse(localStorage.getItem('inputValue'));//get the input
 
+
 //Get all  items from all json files
 let allItems = [];
 const urls = [
@@ -223,3 +224,15 @@ function renderCart() {
     });
         
 }
+
+// Search bar functionality
+
+const input = document.querySelector('#input'); // Get the input
+
+input.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        const inputValue = event.target.value;
+        localStorage.setItem('inputValue', JSON.stringify(inputValue)); // Save the input value to localStorage
+        location.reload(); // Reload the page to show the search results
+    }
+});
