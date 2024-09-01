@@ -58,7 +58,7 @@ const login = document.querySelector('#loginBtn');
 const username = document.querySelector('#username');
 
 login.addEventListener('click',()=>{
-    window.location.href = 'sorry.html';
+    window.location.href = '../HTML/sorry.html';
     localStorage.setItem('userName', JSON.stringify(username.value));
 });
 
@@ -67,7 +67,7 @@ const input = document.querySelector('#input');
 input.addEventListener('keydown', function(event){
     if(event.key === 'Enter'){
         const inputValue = event.target.value;
-        window.location.href = 'search.html';
+        window.location.href = '../HTML/search.html';
         localStorage.setItem('inputValue', JSON.stringify(inputValue));
         console.log(inputValue);
     }
@@ -75,7 +75,7 @@ input.addEventListener('keydown', function(event){
 
 //Create an XMLHttpRequest object
 let http = new XMLHttpRequest();
-http.open('get', 'patterns.json', true);
+http.open('get', '../JAVASCRIPT/acc.json', true);
 http.send();
 
 let i = 0;

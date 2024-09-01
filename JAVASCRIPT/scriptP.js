@@ -40,65 +40,56 @@ crossCart.addEventListener('click',()=>{
     overlayp.classList.remove('active');
 })
 
-//Search bar code start
+const account = document.querySelector('#account');
+const accPage = document.querySelector('.pop-upAcc');
+const crossAcc = document.querySelector('#cross-acc');
 
-let inputValue = JSON.parse(localStorage.getItem('inputValue'));//get the input
-
-
-//Get all  items from all json files
-let allItems = [];
-const urls = [
-    'yarns.json',
-    'acc.json',
-    'patterns.json'
-];
-
-let pendingRequests = urls.length;
-
-urls.forEach(url => {
-    let xhr = new XMLHttpRequest();
-    
-    xhr.open('GET', url, true);
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4) { // When the request is complete
-            if (xhr.status === 200) { // If the request was successful
-                let data = JSON.parse(xhr.responseText);
-                allItems = allItems.concat(data); 
-            } else {
-                console.error('Error fetching data from', url, xhr.statusText);
-            }
-            pendingRequests--;
-
-            if (pendingRequests === 0) {
-                console.log(allItems);
-                let results = [];
-                allItems.forEach(product =>{
-                    if(product.name.toLowerCase().includes(inputValue.toLowerCase())){
-                        results.push(product);
-                    }
-                    
-                });
-
-                console.log(results);
-                document.querySelector('#resultNumber').innerHTML = results.length;
-                if(results.length == 1)
-                {
-                    document.querySelector('#resultTitle').innerHTML = 'RESULT';
-                }
-                renderSearch(results);
-            }
-        }
-    };
-    
-    xhr.send();
+account.addEventListener('click', () => {
+    accPage.classList.add('active');
+    overlayp.classList.add('active');
 });
 
-//Get all items containing the search value
+crossAcc.addEventListener('click', () => {
+    accPage.classList.remove('active');
+    overlayp.classList.remove('active');
+});
 
-function renderSearch(results){
-    let output = "";
+const login = document.querySelector('#loginBtn');
+const username = document.querySelector('#username');
 
-        for (let item of results) {
+login.addEventListener('click',()=>{
+    window.location.href = '../HTML/sorry.html';
+    localStorage.setItem('userName', JSON.stringify(username.value));
+});
+
+const input = document.querySelector('#input');
+
+input.addEventListener('keydown', function(event){
+    if(event.key === 'Enter'){
+        const inputValue = event.target.value;
+        window.location.href = '../HTML/search.html';
+        localStorage.setItem('inputValue', JSON.stringify(inputValue));
+        console.log(inputValue);
+    }
+});
+
+//Create an XMLHttpRequest object
+let http = new XMLHttpRequest();
+http.open('get', '../JAVASCRIPT/patterns.json', true);
+http.send();
+
+let i = 0;
+let v = [];
+let cartItems = JSON.parse(localStorage.getItem('cartItems')) || []; // Retrieve or initialize cartItems
+let cartOutput = ""; // To hold the cart HTML
+let total = JSON.parse(localStorage.getItem('total')) || 0;
+
+http.onload = function () {
+    if (this.readyState == 4 && this.status == 200) {
+        let products = JSON.parse(this.responseText);
+        let output = "";
+
+        for (let item of products) {
             output += `
                 <div class="product">
                     <img src="${item.image}" alt="${item.image}">
@@ -117,6 +108,7 @@ function renderSearch(results){
         document.querySelector(".products").innerHTML = output;
         const addToCartButtons = document.querySelectorAll('.buttonItem');
 
+        // Restore the cart items on page load
         renderCart();
 
         addToCartButtons.forEach(button => {
@@ -136,27 +128,6 @@ function renderSearch(results){
                 localStorage.setItem('total',JSON.stringify(total));
             });
         });
-}
-
-
-//Search bar code end
-
-//Create an XMLHttpRequest object
-let http = new XMLHttpRequest();
-http.open('get', 'yarns.json', true);
-http.send();
-
-let i = 0;
-let v = [];
-let cartItems = JSON.parse(localStorage.getItem('cartItems')) || []; // Retrieve or initialize cartItems
-let cartOutput = ""; // To hold the cart HTML
-let total = JSON.parse(localStorage.getItem('total')) || 0;
-
-http.onload = function () {
-    if (this.readyState == 4 && this.status == 200) {
-        
-        // Restore the cart items on page load
-        renderCart();
     }
 };
 
@@ -222,39 +193,7 @@ function renderCart() {
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
         localStorage.setItem('total', JSON.stringify(total));
     });
-        
 }
 
-const account = document.querySelector('#account');
-const accPage = document.querySelector('.pop-upAcc');
-const crossAcc = document.querySelector('#cross-acc');
-
-account.addEventListener('click', () => {
-    accPage.classList.add('active');
-    overlayp.classList.add('active');
-});
-
-crossAcc.addEventListener('click', () => {
-    accPage.classList.remove('active');
-    overlayp.classList.remove('active');
-});
-
-const login = document.querySelector('#loginBtn');
-const username = document.querySelector('#username');
-
-login.addEventListener('click',()=>{
-    window.location.href = 'sorry.html';
-    localStorage.setItem('userName', JSON.stringify(username.value));
-});
-
-// Search bar functionality
-
-const input = document.querySelector('#input'); // Get the input
-
-input.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        const inputValue = event.target.value;
-        localStorage.setItem('inputValue', JSON.stringify(inputValue)); // Save the input value to localStorage
-        location.reload(); // Reload the page to show the search results
-    }
-});
+//Clears cart (for debugging or reset purposes)
+//localStorage.removeItem('cartItems');

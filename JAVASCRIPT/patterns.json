@@ -1,55 +1,55 @@
 [
     {
         "name":"June Top Light - PetiteKnit",
-        "image":"PatternImages/JuneTopLight.png",
+        "image":"../PatternImages/JuneTopLight.png",
         "price":6,
         "quantity":1
     },
     {
         "name":"Cloud Sweater - PetiteKnit",
-        "image":"PatternImages/CloudSweater.png",
+        "image":"../PatternImages/CloudSweater.png",
         "price":6,
         "quantity":1
     },
     {
         "name":"Celeste Sweater - PetiteKnit",
-        "image":"PatternImages/CelesteSweater.png",
+        "image":"../PatternImages/CelesteSweater.png",
         "price":6,
         "quantity":1
     },
     {
         "name":"Blouse no.1 - My Favourite Things Knitwear",
-        "image":"PatternImages/BlouseNO1.png",
+        "image":"../PatternImages/BlouseNO1.png",
         "price":6.95,
         "quantity":1
     },
     {
         "name":"Cardigan no.9 - My Favourite Things Knitwear",
-        "image":"PatternImages/CardiganNO9.png",
+        "image":"../PatternImages/CardiganNO9.png",
         "price":6.95,
         "quantity":1
     },
     {
         "name":"Jacket no.2 - My Favourite Things Knitwear",
-        "image":"PatternImages/JacketNO2.png",
+        "image":"../PatternImages/JacketNO2.png",
         "price":6.95,
         "quantity":1
     },
     {
         "name":"Porcelain Sweater - LeKnit",
-        "image":"PatternImages/PorcelainSweater.png",
+        "image":"../PatternImages/PorcelainSweater.png",
         "price":6.7,
         "quantity":1
     },
     {
         "name":"Gabi Tee - LeKnit",
-        "image":"PatternImages/GabiTee.png",
+        "image":"../PatternImages/GabiTee.png",
         "price":6,
         "quantity":1
     },
     {
         "name":"Terracotta Sweater - LeKnit",
-        "image":"PatternImages/TerracottaSweater.png",
+        "image":"../PatternImages/TerracottaSweater.png",
         "price":6.7,
         "quantity":1
     }

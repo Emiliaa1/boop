@@ -1,55 +1,55 @@
 [
     {
         "name":"Lykke BLUSH 80 cm - 3cm",
-        "image":"AccImages/Blush80cm.png",
+        "image":"../AccImages/Blush80cm.png",
         "price":10,
         "quantity":1
     },
     {
         "name":"Lykke BLUSH 80 cm - 4cm",
-        "image":"AccImages/Blush80cm.png",
+        "image":"../AccImages/Blush80cm.png",
         "price":10,
         "quantity":1
     },
     {
         "name":"Lykke BLUSH 80 cm - 5cm",
-        "image":"AccImages/Blush80cm.png",
+        "image":"../AccImages/Blush80cm.png",
         "price":10,
         "quantity":1
     },
     {
         "name":"Drops Pro 80 cm - 3cm",
-        "image":"AccImages/DropsPro80cm.png",
+        "image":"../AccImages/DropsPro80cm.png",
         "price":4,
         "quantity":1
     },
     {
         "name":"Drops Pro 80 cm - 4cm",
-        "image":"AccImages/DropsPro80cm.png",
+        "image":"../AccImages/DropsPro80cm.png",
         "price":4,
         "quantity":1
     },
     {
         "name":"Drops Pro 80 cm - 5cm",
-        "image":"AccImages/DropsPro80cm.png",
+        "image":"../AccImages/DropsPro80cm.png",
         "price":4,
         "quantity":1
     },
     {
         "name":"Cable needles",
-        "image":"AccImages/Cable.png",
+        "image":"../AccImages/Cable.png",
         "price":1,
         "quantity":1
     },
     {
         "name":"Stitch Marker set",
-        "image":"AccImages/Marker.png",
+        "image":"../AccImages/Marker.png",
         "price":5,
         "quantity":1
     },
     {
         "name":"PetiteKnit project bag",
-        "image":"AccImages/Bag.png",
+        "image":"../AccImages/Bag.png",
         "price":15,
         "quantity":1
     }

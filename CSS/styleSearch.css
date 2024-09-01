@@ -1,11 +1,11 @@
 @font-face {
     font-family: cuteFont;
-    src: url(Fonts/Cottontail\ Free.ttf);
+    src: url(../Fonts/Cottontail\ Free.ttf);
 }
 
 @font-face {
     font-family: mainFont;
-    src: url(Fonts/Poppins-Regular.ttf);
+    src: url(../Fonts/Poppins-Regular.ttf);
 }
 
 *{
@@ -18,6 +18,12 @@
 html{
     scroll-behavior: smooth;
     font-family: mainFont;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    min-height:100vh;
 }
 
 .box{
@@ -267,62 +273,79 @@ html{
 
 /*pop-up section ends*/
 
-/*hero section starts*/
+/*Results section starts*/
 
-.hero{
-    width:100%;
-    position:relative;
- }
- 
- .hero img{
-     width:100%;
-     display:block;
- }
- 
- #hero-title{
-     position:absolute;
-     color:#f2f2f2;
-     text-align: center;
-     top:50%;
-     left:50%;
-     transform: translate(-50%, -50%);
-     text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
-     font-family: cuteFont;
- }
- 
- .hero h1{
-     font-size:10rem;
- }
-/*hero section ends*/
-
-
-/*page description starts*/
-
-.description{
-    background-color:#f2f2f2;
+.results{
     display:flex;
     justify-content: center;
-}
-
-.description p{
-    width:75%;
-    text-align:center;
-    margin:10%;
-    font-size:1.2em;
-    font-style: italic;
-}
-
-/*page description ends*/
-
-/*products section starts*/
-#title{
-    display:flex;
-    justify-content: center;
+    gap:1%;
     padding:5%;
 }
 
-#title h2{
-    font-size:2em;
+.results p{
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.results span{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/*Results section ends*/
+
+/*Cart items*/
+
+.loadItems{
+    display:flex;
+    flex-direction: column;
+    overflow-y:scroll;
+    flex:7;
+}
+
+.cart-product{
+    display:flex;
+    align-items: center;
+    gap:5px;
+}
+
+.cart-product img{
+    width:20%;
+}
+
+.nameC{
+    font-size:0.7em;
+    text-wrap:wrap;
+    width:47%;
+}
+
+.priceC{
+    font-size:0.7em;
+}
+
+.quantity-controls{
+    flex:2;
+    display:flex;
+    justify-content: center;
+}
+
+.plus-button{
+   width:100%;
+   flex:1;
+   text-align: center;
+}
+
+.minus-button{
+    width:100%;
+    flex:1;
+    text-align: center;
+}
+
+.quantity{
+    flex:1;
+    text-align: center;
+    font-size: 0.8rem;
 }
 
 
@@ -358,8 +381,7 @@ html{
     padding:0.2em 0.5em 0.2em 0.5em;
 }
 
-
-/*products section ends*/
+/*Products section ends*/
 
 
 /*Authentication*/
@@ -486,7 +508,25 @@ html{
     text-align: justify;
 }
 
+/*for sticky footer*/
+header{
+    flex-grow: 0;
+    flex-shrink:0;
+    flex-basis:auto;
+}
+
+section{
+    flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
 footer{
+    flex-grow: 0;
+    flex-shrink:0;
+    flex-basis:auto;
+    position:fixed;
+    bottom:0;
     display:flex;
     padding:20px;
     background-color:#CDD7E1;
@@ -507,59 +547,6 @@ footer{
 /*Footer section ends*/
 
 
-/*Cart items*/
-
-.loadItems{
-    display:flex;
-    flex-direction: column;
-    overflow-y:scroll;
-    flex:7;
-}
-
-.cart-product{
-    display:flex;
-    align-items: center;
-    gap:5px;
-}
-
-.cart-product img{
-    width:20%;
-}
-
-.nameC{
-    font-size:0.7em;
-    text-wrap:wrap;
-    width:47%;
-}
-
-.priceC{
-    font-size:0.7em;
-}
-
-.quantity-controls{
-    flex:2;
-    display:flex;
-    justify-content: center;
-}
-
-.plus-button{
-   width:100%;
-   flex:1;
-   text-align: center;
-}
-
-.minus-button{
-    width:100%;
-    flex:1;
-    text-align: center;
-}
-
-.quantity{
-    flex:1;
-    text-align: center;
-    font-size: 0.8rem;
-}
-
 /*media queries*/
 
 @media screen and (max-width:1320px) and (min-width:990px){
@@ -575,22 +562,6 @@ footer{
     #cross{
         height:20px;
     }
-
-    /*Hero section starts*/
-    
-    .hero h1{
-        font-size:9rem;
-    }
-    /*Hero section ends*/
-    
-    /*page description starts*/
-    
-    .description p{
-        width:80%;
-        font-size:1.1em;
-    }
-    
-    /*page description ends*/
 
      /*Pop-up window*/
      .pop-up{
@@ -616,6 +587,7 @@ footer{
     .pop-upAcc h3{
         font-size:1.5em;
     }
+
 }
 
 
@@ -645,21 +617,6 @@ footer{
     #cross{
         height:15px;
     }
-
-     /*Hero section starts*/
-     .hero h1{
-        font-size:7rem;
-    }
-    /*Hero section ends*/
-
-    /*page description starts*/
-    
-    .description p{
-        width:80%;
-        font-size:0.9em;
-    }
-    
-    /*page description ends*/
 
     #logoF{
         width: 60%;
@@ -725,7 +682,6 @@ footer{
     .pop-upAcc h3{
         font-size:1.3em;
     }
-
 }
 
 @media screen and (max-width:599px){
@@ -772,22 +728,6 @@ footer{
     #menu{
         height:15px;
     }
-
-    
-     /*Hero section starts*/
-    .hero h1{
-        font-size:4rem;
-    }
-    /*Hero section ends*/
-
-    /*page description starts*/
-    
-    .description p{
-        width:80%;
-        font-size:0.8em;
-    }
-    
-    /*page description ends*/
 
     
     .products{
@@ -916,21 +856,6 @@ footer{
 
     .priceC{
         font-size:0.9em;
-    }
-
-    
-    .hero h1{
-        font-size:13rem;
-    }
-
-    /*page description starts*/
-
-    .description p{
-        width:75%;
-        text-align:center;
-        margin:10%;
-        font-size:1.5em;
-        font-style: italic;
     }
 
     .total{

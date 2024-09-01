@@ -1,11 +1,11 @@
 @font-face {
     font-family: sorryFont;
-    src: url(Fonts/Salmon.ttf);
+    src: url(../Fonts/Salmon.ttf);
 }
 
 @font-face {
     font-family: mainFont;
-    src: url(Fonts/Poppins-Regular.ttf);
+    src: url(../Fonts/Poppins-Regular.ttf);
 }
 
 html{

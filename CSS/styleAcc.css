@@ -1,11 +1,11 @@
 @font-face {
     font-family: cuteFont;
-    src: url(Fonts/Cottontail\ Free.ttf);
+    src: url(../Fonts/Cottontail\ Free.ttf);
 }
 
 @font-face {
     font-family: mainFont;
-    src: url(Fonts/Poppins-Regular.ttf);
+    src: url(../Fonts/Poppins-Regular.ttf);
 }
 
 *{
@@ -267,59 +267,6 @@ html{
 
 /*pop-up section ends*/
 
-/*Cart items*/
-
-.loadItems{
-    display:flex;
-    flex-direction: column;
-    overflow-y:scroll;
-    flex:7;
-}
-
-.cart-product{
-    display:flex;
-    align-items: center;
-    gap:5px;
-}
-
-.cart-product img{
-    width:20%;
-}
-
-.nameC{
-    font-size:0.7em;
-    text-wrap:wrap;
-    width:47%;
-}
-
-.priceC{
-    font-size:0.7em;
-}
-
-.quantity-controls{
-    flex:2;
-    display:flex;
-    justify-content: center;
-}
-
-.plus-button{
-   width:100%;
-   flex:1;
-   text-align: center;
-}
-
-.minus-button{
-    width:100%;
-    flex:1;
-    text-align: center;
-}
-
-.quantity{
-    flex:1;
-    text-align: center;
-    font-size: 0.8rem;
-}
-
 /*hero section starts*/
 
 .hero{
@@ -560,6 +507,58 @@ footer{
 /*Footer section ends*/
 
 
+/*Cart items*/
+
+.loadItems{
+    display:flex;
+    flex-direction: column;
+    overflow-y:scroll;
+    flex:7;
+}
+
+.cart-product{
+    display:flex;
+    align-items: center;
+    gap:5px;
+}
+
+.cart-product img{
+    width:20%;
+}
+
+.nameC{
+    font-size:0.7em;
+    text-wrap:wrap;
+    width:47%;
+}
+
+.priceC{
+    font-size:0.7em;
+}
+
+.quantity-controls{
+    flex:2;
+    display:flex;
+    justify-content: center;
+}
+
+.plus-button{
+   width:100%;
+   flex:1;
+   text-align: center;
+}
+
+.minus-button{
+    width:100%;
+    flex:1;
+    text-align: center;
+}
+
+.quantity{
+    flex:1;
+    text-align: center;
+    font-size: 0.8rem;
+}
 
 /*media queries*/
 
@@ -593,7 +592,7 @@ footer{
     
     /*page description ends*/
 
-    /*Pop-up window*/
+     /*Pop-up window*/
      .pop-up{
         width:40%;
         height:50%;
@@ -617,11 +616,10 @@ footer{
     .pop-upAcc h3{
         font-size:1.5em;
     }
-
 }
 
 
-@media screen and (max-width:990px) and (min-width:600px){
+@media screen and (max-width:989px) and (min-width:600px){
 
     .search-bar{
         height:9vh;
@@ -684,8 +682,8 @@ footer{
         width:2px;
     }
 
-    /*Pop-up window*/
-    .pop-up{
+     /*Pop-up window*/
+     .pop-up{
         width:50%;
         height:55%;
     }
@@ -727,9 +725,10 @@ footer{
     .pop-upAcc h3{
         font-size:1.3em;
     }
+
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:599px){
      /*search bar*/
     
      .search-bar{
@@ -776,8 +775,8 @@ footer{
 
     
      /*Hero section starts*/
-     .hero h1{
-        font-size:5rem;
+    .hero h1{
+        font-size:4rem;
     }
     /*Hero section ends*/
 

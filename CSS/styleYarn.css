@@ -1,11 +1,11 @@
 @font-face {
     font-family: cuteFont;
-    src: url(Fonts/Cottontail\ Free.ttf);
+    src: url(../Fonts/Cottontail\ Free.ttf);
 }
 
 @font-face {
     font-family: mainFont;
-    src: url(Fonts/Poppins-Regular.ttf);
+    src: url(../Fonts/Poppins-Regular.ttf);
 }
 
 *{
@@ -20,16 +20,10 @@ html{
     font-family: mainFont;
 }
 
-body{
-    display:flex;
-    flex-direction: column;
-    min-height:100vh;
-}
-
+/*Navigation + menu section starts*/
 .box{
     background-color: #f2f2f2;
 }
-
 
 .off-screen-menu{
     background-color:#f2f2f2;
@@ -38,7 +32,7 @@ body{
     max-width:450px;
     position:fixed;
     top:0px;
-    z-index: 1000;
+    z-index: 10;
     margin:0px;
     left:-450px;
     display: flex;
@@ -83,7 +77,7 @@ body{
     background-color: #E8E6E6;
     width:100%;
     height:10vh;
-    top:-100px;
+    top:-200px;
     z-index:3;
     align-items: center;
     padding-left:10px;
@@ -122,7 +116,7 @@ body{
     width:100%;
     height:100%;
     background: rgba(0, 0, 0, 0.7);
-    z-index:999;
+    z-index:9;
     pointer-events:auto;
     visibility: hidden;
 }
@@ -130,38 +124,34 @@ body{
 .dark-filter.active{
     visibility: visible;
 }
-
-
 .navigation{
+    position:relative;
     padding:7px;
     display: flex;
     align-items:center;
-    justify-content:space-between;
-    position: relative; /* Added for the logo centering */
+    justify-content: space-between;
 }
-
 .nav-logo{
-    margin: 0 auto;
-    z-index: 7;
-    display: flex;
+    margin:0 auto;
+    z-index: 7; 
+    display:flex;
     justify-content: center;
-    flex: 2; /* Added to take up remaining space */
+    flex:2;
 }
 
 .logo{
    max-height:50px;
    width: 100%;
    align-self: center;
-   
 }
 
 .nav-items{
     padding: 10px;
     display: flex;
     gap: 1em;
-    margin-left: auto;
+    margin-left: auto; 
     z-index: 7;
-    flex: 1; /* Added to take up remaining space */
+    flex:1;
     justify-content: flex-end;
 }
 .item{
@@ -172,18 +162,18 @@ body{
 .menu{
     padding:10px;
     z-index: 7;
-    flex: 1; /* Added to take up remaining space */
-    display: flex;
+    flex:1;
+    display:flex;
     justify-content: flex-start;
 }
 #menu{
     height: 25px;
 }
-#menu{
-    height: 25px;
-}
 
-/*pop-up section starts*/
+/*Navigation + menu section ends*/
+
+/*Pop-up window*/
+
 .dark-filterp{
     position:fixed;
     top:0;
@@ -250,7 +240,6 @@ body{
     letter-spacing: 0.05em;
 }
 
-
 .cart-bottom{
     display:flex;
     align-items:center;
@@ -270,119 +259,6 @@ body{
     background-color: #f2f2f2;
     text-decoration: underline;
 }
-
-/*pop-up section ends*/
-
-/*Results section starts*/
-
-.results{
-    display:flex;
-    justify-content: center;
-    gap:1%;
-    padding:5%;
-}
-
-.results p{
-    font-size: 2em;
-    font-weight: bold;
-    letter-spacing: 0.05em;
-}
-
-.results span{
-    font-size: 2em;
-    font-weight: bold;
-}
-
-/*Results section ends*/
-
-/*Cart items*/
-
-.loadItems{
-    display:flex;
-    flex-direction: column;
-    overflow-y:scroll;
-    flex:7;
-}
-
-.cart-product{
-    display:flex;
-    align-items: center;
-    gap:5px;
-}
-
-.cart-product img{
-    width:20%;
-}
-
-.nameC{
-    font-size:0.7em;
-    text-wrap:wrap;
-    width:47%;
-}
-
-.priceC{
-    font-size:0.7em;
-}
-
-.quantity-controls{
-    flex:2;
-    display:flex;
-    justify-content: center;
-}
-
-.plus-button{
-   width:100%;
-   flex:1;
-   text-align: center;
-}
-
-.minus-button{
-    width:100%;
-    flex:1;
-    text-align: center;
-}
-
-.quantity{
-    flex:1;
-    text-align: center;
-    font-size: 0.8rem;
-}
-
-
-.products{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 2em;
-    row-gap: 2em;
-    padding:0 5% 5% 5%;
-}
-
-.product{
-    display:flex;
-    flex-direction:column;
-    justify-content: space-around;
-    align-items:center;
-    border-style: solid;
-    border-color: #636970;
-    padding:0.5em;
-}
-
-.product img{
-    width:100%;
-}
-
-.name{
-    font-size:1em;
-    text-align: center;
-}
-
-.button{
-    border-style: double;
-    padding:0.2em 0.5em 0.2em 0.5em;
-}
-
-/*Products section ends*/
-
 
 /*Authentication*/
 .pop-upAcc{
@@ -457,6 +333,156 @@ body{
 }
 
 
+
+/*Cart items*/
+
+.loadItems{
+    display:flex;
+    flex-direction: column;
+    overflow-y:scroll;
+    flex:7;
+}
+
+.cart-product{
+    display:flex;
+    align-items: center;
+    gap:5px;
+}
+
+.cart-product img{
+    width:20%;
+    flex:1;
+}
+
+.nameC{
+    font-size:0.7em;
+    text-wrap:wrap;
+    width:47%;
+    flex:3;
+}
+
+.priceC{
+    font-size:0.7em;
+    flex:1;
+    text-align: center;
+}
+
+.quantity-controls{
+    flex:2;
+    display:flex;
+    justify-content: center;
+}
+
+.plus-button{
+   width:100%;
+   flex:1;
+   text-align: center;
+}
+
+.minus-button{
+    width:100%;
+    flex:1;
+    text-align: center;
+}
+
+.quantity{
+    flex:1;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+
+/*Hero section starts*/
+
+.hero{
+   width:100%;
+   position:relative;
+}
+
+.hero img{
+    width:100%;
+    display:block;
+}
+
+#hero-title{
+    position:absolute;
+    color:#f2f2f2;
+    text-align: center;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+    font-family: cuteFont;
+}
+
+.hero h1{
+    font-size:10rem;
+}
+/*Hero section ends*/
+
+/*page description starts*/
+
+.description{
+    background-color:#f2f2f2;
+    display:flex;
+    justify-content: center;
+}
+
+.description p{
+    width:75%;
+    text-align:center;
+    margin:10%;
+    font-size:1.2em;
+    font-style: italic;
+}
+
+/*page description ends*/
+
+/*Products section starts*/
+#title{
+    display:flex;
+    justify-content: center;
+    padding:5%;
+}
+
+#title h2{
+    font-size:2em;
+}
+
+.products{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2em;
+    row-gap: 2em;
+    padding:0 5% 5% 5%;
+}
+
+.product{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items:center;
+    border-style: solid;
+    border-color: #636970;
+    padding:0.5em;
+}
+
+.product img{
+    width:100%;
+}
+
+.name{
+    font-size:1em;
+    text-align: center;
+}
+
+.button{
+    border-style: double;
+    padding:0.2em 0.5em 0.2em 0.5em;
+}
+
+/*Products section ends*/
+
 /*Footer section starts*/
 
 .footer{
@@ -508,25 +534,7 @@ body{
     text-align: justify;
 }
 
-/*for sticky footer*/
-header{
-    flex-grow: 0;
-    flex-shrink:0;
-    flex-basis:auto;
-}
-
-section{
-    flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: auto;
-}
-
 footer{
-    flex-grow: 0;
-    flex-shrink:0;
-    flex-basis:auto;
-    position:fixed;
-    bottom:0;
     display:flex;
     padding:20px;
     background-color:#CDD7E1;
@@ -563,6 +571,22 @@ footer{
         height:20px;
     }
 
+    /*Hero section starts*/
+    
+    .hero h1{
+        font-size:9rem;
+    }
+    /*Hero section ends*/
+    
+    /*page description starts*/
+    
+    .description p{
+        width:80%;
+        font-size:1.1em;
+    }
+    
+    /*page description ends*/
+
      /*Pop-up window*/
      .pop-up{
         width:40%;
@@ -587,7 +611,6 @@ footer{
     .pop-upAcc h3{
         font-size:1.5em;
     }
-
 }
 
 
@@ -617,6 +640,21 @@ footer{
     #cross{
         height:15px;
     }
+
+     /*Hero section starts*/
+     .hero h1{
+        font-size:7rem;
+    }
+    /*Hero section ends*/
+
+    /*page description starts*/
+    
+    .description p{
+        width:80%;
+        font-size:0.9em;
+    }
+    
+    /*page description ends*/
 
     #logoF{
         width: 60%;
@@ -728,6 +766,22 @@ footer{
     #menu{
         height:15px;
     }
+
+    
+     /*Hero section starts*/
+     .hero h1{
+        font-size:5rem;
+    }
+    /*Hero section ends*/
+
+    /*page description starts*/
+    
+    .description p{
+        width:80%;
+        font-size:0.8em;
+    }
+    
+    /*page description ends*/
 
     
     .products{
@@ -858,6 +912,21 @@ footer{
         font-size:0.9em;
     }
 
+    
+    .hero h1{
+        font-size:13rem;
+    }
+
+    /*page description starts*/
+
+    .description p{
+        width:75%;
+        text-align:center;
+        margin:10%;
+        font-size:1.5em;
+        font-style: italic;
+    }
+
     .total{
         justify-content: center;
         align-items: center;
@@ -870,4 +939,6 @@ footer{
     #checkout{
         font-size: 1.1em;
     }
+
 }
+

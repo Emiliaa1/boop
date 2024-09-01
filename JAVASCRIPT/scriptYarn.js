@@ -1,45 +1,44 @@
 const offScreenMenu = document.querySelector('.off-screen-menu');
 const menu = document.querySelector('#menu');
-const cross = document.querySelector('#cross')
+const cross = document.querySelector('#cross');
 const overlay = document.querySelector('.dark-filter');
 
-menu.addEventListener('click', ()=> {
+menu.addEventListener('click', () => {
     offScreenMenu.classList.add('active');
     overlay.classList.add('active');
-})
+});
 
-cross.addEventListener('click',()=>{
+cross.addEventListener('click', () => {
     offScreenMenu.classList.remove('active');
     overlay.classList.remove('active');
-})
+});
 
 const search = document.querySelector('#search');
 const searchBar = document.querySelector('.search-bar');
 const crossSearch = document.querySelector('#cross-search');
 
-search.addEventListener('click',()=>{
+search.addEventListener('click', () => {
     searchBar.classList.add('active');
-})
+});
 
-crossSearch.addEventListener('click',()=>{
+crossSearch.addEventListener('click', () => {
     searchBar.classList.remove('active');
-})
-
+});
 
 const cart = document.querySelector('#cart');
 const cartPage = document.querySelector('.pop-up');
 const crossCart = document.querySelector('#cross-cart');
 const overlayp = document.querySelector('.dark-filterp');
 
-cart.addEventListener('click',()=>{
+cart.addEventListener('click', () => {
     cartPage.classList.add('active');
     overlayp.classList.add('active');
-})
+});
 
-crossCart.addEventListener('click',()=>{
+crossCart.addEventListener('click', () => {
     cartPage.classList.remove('active');
     overlayp.classList.remove('active');
-})
+});
 
 const account = document.querySelector('#account');
 const accPage = document.querySelector('.pop-upAcc');
@@ -59,15 +58,16 @@ const login = document.querySelector('#loginBtn');
 const username = document.querySelector('#username');
 
 login.addEventListener('click',()=>{
-    window.location.href = 'sorry.html';
+    window.location.href = '../HTML/sorry.html';
     localStorage.setItem('userName', JSON.stringify(username.value));
 });
+
 const input = document.querySelector('#input');
 
 input.addEventListener('keydown', function(event){
     if(event.key === 'Enter'){
         const inputValue = event.target.value;
-        window.location.href = 'search.html';
+        window.location.href = '../HTML/search.html';
         localStorage.setItem('inputValue', JSON.stringify(inputValue));
         console.log(inputValue);
     }
@@ -75,7 +75,7 @@ input.addEventListener('keydown', function(event){
 
 //Create an XMLHttpRequest object
 let http = new XMLHttpRequest();
-http.open('get', 'yarns.json', true);
+http.open('get', '../JAVASCRIPT/yarns.json', true);
 http.send();
 
 let i = 0;
@@ -86,9 +86,48 @@ let total = JSON.parse(localStorage.getItem('total')) || 0;
 
 http.onload = function () {
     if (this.readyState == 4 && this.status == 200) {
-        
+        let products = JSON.parse(this.responseText);
+        let output = "";
+
+        for (let item of products) {
+            output += `
+                <div class="product">
+                    <img src="${item.image}" alt="${item.image}">
+                    <p class="name">${item.name}</p>
+                    <p class="price">
+                        <span>${item.price}</span>
+                        <span>&euro;</span>
+                    </p>
+                    <button class="buttonItem" id="${i}">Add to cart</button>
+                </div>
+            `;
+            v[i] = item;
+            i++;
+        }
+
+        document.querySelector(".products").innerHTML = output;
+        const addToCartButtons = document.querySelectorAll('.buttonItem');
+
         // Restore the cart items on page load
         renderCart();
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                let newItem = v[button.id];
+                let existingItem = cartItems.find(item => item.name === newItem.name);
+
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    newItem.quantity = 1;
+                    cartItems.push(newItem);
+                }
+                total+=newItem.price;
+                renderCart();
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                localStorage.setItem('total',JSON.stringify(total));
+            });
+        });
     }
 };
 
@@ -154,10 +193,7 @@ function renderCart() {
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
         localStorage.setItem('total', JSON.stringify(total));
     });
-        
 }
 
 //Clears cart (for debugging or reset purposes)
 //localStorage.removeItem('cartItems');
-
-
