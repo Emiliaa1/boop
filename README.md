@@ -10,6 +10,9 @@ Knitting is a highly creative hobby, and I thought it would be a great opportuni
 - **CSS**
 - **JavaScript**
 
+### 💻 Responsive Design
+Loopsy is designed to be fully responsive, ensuring a seamless experience across all devices, whether you're browsing on a desktop, tablet, or smartphone. The layout and functionality adapt gracefully to different screen sizes, providing an optimal user experience.
+
 ### 💡 Inspiration
 - **[Andrele.ro](https://andrele.ro/)**  
   A Romanian online fiber arts shop offering a variety of popular yarns and knitting accessories. This website inspired me to implement the cart and authentication forms as pop-up windows.
