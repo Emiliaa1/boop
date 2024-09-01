@@ -29,5 +29,5 @@ Looking ahead, I plan to improve Loopsy by integrating an advanced database that
 
 ### 🌐 How to Access Loopsy
 To explore the website, simply click on the following link:  
-👉 [**Loopsy**](https://emiliaa1.github.io/boop/main)
+👉 [**Loopsy**](https://emiliaa1.github.io/boop/HTML/main.html)
   
