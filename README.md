@@ -22,6 +22,11 @@ Knitting is a highly creative hobby, and I thought it would be a great opportuni
 - [W3Schools](https://www.w3schools.com/)
 - [MDN Web Docs](https://developer.mozilla.org/en-US/)
 
+### 🚀 Future Improvements
+
+Looking ahead, I plan to improve Loopsy by integrating an advanced database that will enable features like user account creation, personalized profiles, and secure login. Additionally, I aim to implement a fully functional e-commerce system, so users can purchase products directly from the website, offering a seamless and convenient shopping experience.
+
+
 ### 🌐 How to Access Loopsy
 To explore the website, simply click on the following link:  
 👉 [**Loopsy**](https://emiliaa1.github.io/boop/main)
