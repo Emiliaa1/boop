@@ -576,6 +576,18 @@ footer{
     #cross-cart{
         height:20px;
     }
+
+    /*pop-up authentication*/
+
+    .pop-upAcc{
+        width:35%;
+        height:50%;
+    }
+
+    .pop-upAcc h3{
+        font-size:1.5em;
+    }
+
 }
 
 
@@ -659,6 +671,16 @@ footer{
 
     #checkout{
         font-size: 0.9em;
+    }
+
+    /*pop-up authentication*/
+    .pop-upAcc{
+        width:40%;
+        height:45%;
+    }
+    
+    .pop-upAcc h3{
+        font-size:1.3em;
     }
 }
 
@@ -769,6 +791,16 @@ footer{
 
     #checkout{
         font-size: 0.6em;
+    }
+
+     /*Pop-up authentication*/
+     .pop-upAcc{
+        width:70%;
+        height:40%;
+    }
+    
+    .pop-upAcc h3{
+        font-size:1.3em;
     }
 
 }

@@ -593,7 +593,7 @@ footer{
     
     /*page description ends*/
 
-     /*Pop-up window*/
+    /*Pop-up window*/
      .pop-up{
         width:40%;
         height:50%;
@@ -606,10 +606,22 @@ footer{
     #cross-cart{
         height:20px;
     }
+
+    /*pop-up authentication*/
+
+    .pop-upAcc{
+        width:35%;
+        height:50%;
+    }
+
+    .pop-upAcc h3{
+        font-size:1.5em;
+    }
+
 }
 
 
-@media screen and (max-width:989px) and (min-width:600px){
+@media screen and (max-width:990px) and (min-width:600px){
 
     .search-bar{
         height:9vh;
@@ -672,8 +684,8 @@ footer{
         width:2px;
     }
 
-     /*Pop-up window*/
-     .pop-up{
+    /*Pop-up window*/
+    .pop-up{
         width:50%;
         height:55%;
     }
@@ -705,9 +717,19 @@ footer{
     #checkout{
         font-size: 0.9em;
     }
+
+    /*pop-up authentication*/
+    .pop-upAcc{
+        width:40%;
+        height:45%;
+    }
+    
+    .pop-upAcc h3{
+        font-size:1.3em;
+    }
 }
 
-@media screen and (max-width:599px){
+@media screen and (max-width:600px){
      /*search bar*/
     
      .search-bar{
@@ -830,6 +852,16 @@ footer{
 
     #checkout{
         font-size: 0.6em;
+    }
+
+     /*Pop-up authentication*/
+     .pop-upAcc{
+        width:70%;
+        height:40%;
+    }
+    
+    .pop-upAcc h3{
+        font-size:1.3em;
     }
 
 }
